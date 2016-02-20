@@ -1,0 +1,35 @@
+#all {
+	width: 85%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.as2, #other-main {
+	border-top: solid #000 1px;
+}
+
+#other-main {
+	padding-top: 30px;
+}
+
+#other-nav {
+	margin-bottom: 20px;
+}
+
+#other-nav li {
+	display: inline;
+}
+
+#other-right {
+	height: 800px;
+	border-left: solid #000 1px;
+}
+
+.intro-pic {
+	padding: 0 20px 0 0;
+}
+
+.all-sec {
+	padding: 20px 0 20px 0;
+	margin-right: 30px;
+}

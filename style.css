@@ -1,0 +1,141 @@
+body {
+  font-family: "Helvetica", sans-serif;
+  font-weight: 100;
+  margin: 0;
+  background-color: #fff;
+  text-align: center;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+ul {
+  list-style: none;
+}
+
+a, a:hover, a:focus {
+  text-decoration: none;
+}
+
+#banner {
+  position: relative;
+}
+
+#logo {
+  /*background-color: #fff;*/
+  text-align: left;
+  padding: 10px;
+}
+
+.collage {
+  margin-top: 10px;
+}
+
+.bounce, #menubar {
+  position: absolute;
+  color: #fff;
+}
+
+.bounce {
+  right: 40px;
+  top: 65%;
+}
+
+#menubar {
+  left: 0;
+  top: 15%;  
+  text-align: left;
+  padding: 30px;
+}
+
+#menubar a, .arrow {
+  color: #fff;
+}
+
+.navs {
+  opacity: 0.6;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.navs:hover, .navs:focus {
+  background-color: #8e602b;
+  opacity: 1;
+}
+
+#menu {
+  cursor: pointer;
+}
+
+.page-nav, .other-nav {
+  font-size: 16px;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+#menu-content {
+  display: none;
+  background: rgba(96,69,38,1);
+  padding: 10px 15px 10px 15px;
+}
+
+#menu-toggle:checked + #menu-content {
+  display: block;
+}
+
+.fa {
+ text-rendering: auto;
+ -webkit-font-smoothing: antialiased;
+}
+.fa-angle-double-down:before {content: "\f103";}
+ 
+.bounce {
+ margin-left:-30px;
+ animation: bounce 2s infinite;
+ -webkit-animation: bounce 2s infinite;
+ -moz-animation: bounce 2s infinite;
+ -o-animation: bounce 2s infinite;
+}
+
+#footer-home {
+  background-color: #604526;
+  margin-top: 10px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+ 
+@-webkit-keyframes bounce {
+ 0%, 20%, 50%, 80%, 100% {-webkit-transform: translateY(0);} 
+ 40% {-webkit-transform: translateY(-30px);}
+ 60% {-webkit-transform: translateY(-15px);}
+}
+ 
+@-moz-keyframes bounce {
+ 0%, 20%, 50%, 80%, 100% {-moz-transform: translateY(0);}
+ 40% {-moz-transform: translateY(-30px);}
+ 60% {-moz-transform: translateY(-15px);}
+}
+ 
+@-o-keyframes bounce {
+ 0%, 20%, 50%, 80%, 100% {-o-transform: translateY(0);}
+ 40% {-o-transform: translateY(-30px);}
+ 60% {-o-transform: translateY(-15px);}
+}
+@keyframes bounce {
+ 0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+ 40% {transform: translateY(-30px);}
+ 60% {transform: translateY(-15px);}
+}
+
+@media screen and (max-width: 1100px) {
+  .page-nav, .other-nav {
+    font-size: 14px;
+  }
+
+  #menu {
+    font-size: 12px;
+  }
+}
