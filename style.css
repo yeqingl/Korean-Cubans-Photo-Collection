@@ -9,6 +9,12 @@ body {
   flex-direction: column;
 }
 
+h1, h2 {
+  font-weight: 100;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
 ul {
   list-style: none;
 }
@@ -69,6 +75,10 @@ a, a:hover, a:focus {
 
 .page-nav, .other-nav {
   font-size: 16px;
+}
+
+.other-nav {
+  margin-left: 30px;
 }
 
 #menu-toggle {

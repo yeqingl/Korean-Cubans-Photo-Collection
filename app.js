@@ -4,13 +4,13 @@ $(document).ready(function() {
   });
 });
 
-// var pages = angular.module('pages', ['ui.router'])
-var pages = angular.module('pages', ['ngAnimate','ui.bootstrap', 'ui.bootstrap.tpls', 'ui.router'])
-.run(['$rootScope', '$state', '$stateParams',
-  function ($rootScope, $state, $stateParams) {
-    $rootScope.$state = $state;
-    $rootScope.$stateParams = $stateParams;
-  }]);
+var pages = angular.module("pages", ["ui.router", "ui.bootstrap"]);
+
+pages.run(function ($rootScope, $state, $stateParams) {
+  $rootScope.$on('$stateChangeSuccess', function() {
+    window.scrollTo(0,0);
+  });
+});
 
 pages.config(function($stateProvider, $urlRouterProvider) {
   $urlRouterProvider.otherwise('/home');
@@ -39,31 +39,61 @@ pages.config(function($stateProvider, $urlRouterProvider) {
 
     .state('contents.other', {
       url:'/other',
-      views: {
-        '': { 
-          templateUrl: 'page-templates/other.html'
-        },
-        'all@contents.other': {
-          templateUrl: 'other-templates/all.html'
-        },
-        'book@contents.other': {
-          templateUrl: 'other-templates/book.html'
-        },
-        'journal@contents.other': {
-          templateUrl: 'other-templates/journal.html'
-        },
-        'news@contents.other': {
-          templateUrl: 'other-templates/news.html'
-        },
-        'media@contents.other': {
-          templateUrl: 'other-templates/media.html'
-        },
-        'online@contents.other': {
-          templateUrl: 'other-templates/online.html'
-        }
-      }  
+      templateUrl: 'page-templates/other.html'
+    })
+
+    .state('contents.other.all', {
+      url:'/all',
+      templateUrl: 'other-templates/all.html'
+    })
+
+    .state('contents.other.book', {
+      url:'/book',
+      templateUrl: 'other-templates/book.html'
+    })
+
+    .state('contents.other.journal', {
+      url:'/journal',
+      templateUrl: 'other-templates/journal.html'
+    })
+
+    .state('contents.other.news', {
+      url:'/news',
+      templateUrl: 'other-templates/news.html'
+    })
+
+    .state('contents.other.media', {
+      url:'/media',
+      templateUrl: 'other-templates/media.html'
+    })
+
+    .state('contents.other.online', {
+      url:'/online',
+      templateUrl: 'other-templates/online.html'
     })
 });
 
-pages.controller('Tabs', function ($scope, $window) {
+pages.controller("Tabs", function($rootScope, $scope, $state) {
+  $scope.go = function(route){
+    $state.go(route);
+  };
+
+  $scope.active = function(route){
+    return $state.is(route);
+  };
+
+  $scope.tabs = [
+    { heading: "All", route:"contents.other.all", active:true },
+    { heading: "Books", route:"contents.other.book", active:false },
+    { heading: "Journal Articles", route:"contents.other.journal", active:false },
+    { heading: "News", route:"contents.other.news", active:false },
+    { heading: "Multimedia", route:"contents.other.media", active:false },
+    { heading: "Online Resources", route:"contents.other.online", active:false },
+  ];
+
+  $scope.$on("$stateChangeSuccess", function() {
+    $scope.tabs.forEach(function(tab) {
+      tab.active = $scope.active(tab.route);
+    });
+  });
 });

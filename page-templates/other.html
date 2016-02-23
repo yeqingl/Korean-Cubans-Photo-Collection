@@ -1,18 +1,14 @@
 <div class="other-main" id="all">
 	<h1>Other Resources</h1>
-	<div ng-controller="Tabs">
-		<uib-tabset type="pills">
-			<uib-tab heading="All"><div ui-view="all"></div>
-			</uib-tab>
-			<uib-tab heading="Books"><div ui-view="book"></div>
-			</uib-tab>
-			<uib-tab heading="Journal Articles"><div ui-view="journal"></div>
-			</uib-tab>
-			<uib-tab heading="News"><div ui-view="news"></div>
-			</uib-tab>
-			<uib-tab heading="Multimedia"><div ui-view="media"></div>
-			</uib-tab>
-			<uib-tab heading="Online Resources"><div ui-view="online"></div>
-			</uib-tab>
-		</uib-tabset>
+	<div ng-controller="Tabs" id="tabs">
+		<tabset>
+      <tab 
+        ng-repeat="t in tabs" 
+        heading="{{t.heading}}"
+        select="go(t.route)"
+        active="t.active">
+      </tab>
+    </tabset>
+    <div ui-view></div>
+	</div>
 </div>
