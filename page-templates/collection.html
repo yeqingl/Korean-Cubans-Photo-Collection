@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Korean Cubans Photo Collection</title>
+    <link rel="icon" href="../img/favicon.ico">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <link href="../css/style.css" type="text/css" rel="stylesheet" />
+    <link href="../css/contents.css" type="text/css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/gallerly.css" />
+  </head>
+  <body>
+    <div id="logo">
+      <a href="http://www.lib.washington.edu/" target="_blank">
+        <img src='../img/library-logo.png' alt='library-logo' width="400px">
+      </a>
+    </div>
+    <h1>Photos</h1>
+    <fieldset id="category">
+      <label>People
+        <input name="photo-type" type="radio" value="people" checked />
+      </label>
+      <label>Event
+        <input name="photo-type" type="radio" value="event" />
+      </label>
+      <label>Object
+        <input name="photo-type" type="radio" value="object" />
+      </label>
+      <label>Place
+        <input name="photo-type" type="radio" value="place" />
+      </label>
+    </fieldset>
+    <div id="gallerly" class="container">
+      <div class="image-viewer">
+        <div id="images" class="row"></div>
+        <div class="preview">
+          <div class="wrapper">
+            <a class="prev">&larr; Prev</a>
+            <div class="preview-content">
+              <img />
+              <div class="content">
+                <h4 class="title"></h4>
+                <div id="texts">
+                  <p class="description"></p>
+                  <p class="names"></p>
+                  <p class="date"></p>
+                  <p class="photographer"></p>
+                </div>
+              </div>
+            </div>
+            <a class="next">Next &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <script src="../js/gallerly.js"></script>
+  <script src="../js/main.js"></script>
+  </body>
+</html>

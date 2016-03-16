@@ -8,7 +8,7 @@ var pages = angular.module("pages", ["ui.router", "ui.bootstrap"]);
 
 pages.run(function ($rootScope, $state, $stateParams) {
   $rootScope.$on('$stateChangeSuccess', function() {
-    window.scrollTo(0,0);
+    window.scrollTo(0,0); 
   });
 });
 
@@ -35,6 +35,21 @@ pages.config(function($stateProvider, $urlRouterProvider) {
     .state('contents.history', {
       url:'/history',
       templateUrl: 'page-templates/history.html'
+    })
+
+    .state('contents.history.about', {
+      url:'/about',
+      templateUrl: 'history-templates/about.html'
+    })
+
+    .state('contents.history.familytree', {
+      url:'/familytree',
+      templateUrl: 'history-templates/tree.html'
+    })
+
+    .state('contents.history.familytree2', {
+      url:'/familytree2',
+      templateUrl: 'history-templates/tree2.html'
     })
 
     .state('contents.other', {
@@ -73,7 +88,29 @@ pages.config(function($stateProvider, $urlRouterProvider) {
     })
 });
 
-pages.controller("Tabs", function($rootScope, $scope, $state) {
+pages.controller("HistoryTabs", function($rootScope, $scope, $state) {
+  $scope.go = function(route){
+    $state.go(route);
+  };
+
+  $scope.active = function(route){
+    return $state.is(route);
+  };
+
+  $scope.tabs = [
+    { heading: "About", route:"contents.history.about", active:true },
+    { heading: "Martha Lim Family Tree", route:"contents.history.familytree", active:false },
+    { heading: "Antonio Kim Family Tree", route:"contents.history.familytree2", active:false }
+  ];
+
+  $scope.$on("$stateChangeSuccess", function() {
+    $scope.tabs.forEach(function(tab) {
+      tab.active = $scope.active(tab.route);
+    });
+  });
+});
+
+pages.controller("OtherTabs", function($rootScope, $scope, $state) {
   $scope.go = function(route){
     $state.go(route);
   };

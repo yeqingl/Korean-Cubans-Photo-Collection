@@ -1,0 +1,151 @@
+body {
+  height: 100vh;
+  background-color: #fff;
+}
+
+#gallerly.container {
+  /*background-color: #eae1c6;*/
+  height: 100%;
+  width: 100%;
+}
+
+#category {
+  background-color: #fff;
+  border-radius: 0;
+  margin: 0;
+  z-index: 100;
+}
+
+#category label {
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 20px;
+  font-family: "Helvetica", sans-serif;
+  font-weight: 100;
+}
+
+.image-viewer {
+  width: 100%;
+  height: 100%;
+  padding-right: 15px;
+}
+
+#images {
+  height: 100%;
+  overflow: auto;
+  width: 50%;
+  float: left;
+  background-color: #fff;
+  border-right: 1px solid #d3d3d3;
+  padding-right: 5px;
+}
+
+#gallerly .preview .wrapper {
+  position: relative;
+  display: inline-block;
+  margin-top: 40px;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+
+#gallerly #texts {
+  color: rgba(53, 38, 20, 0.9);
+  text-align: left;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#images img {
+  height: 150px;
+  width: 150px;
+}
+
+#images img:hover {
+  cursor: pointer;
+}
+
+#gallerly .image-viewer .preview {
+  float: right;
+  width: 50%;
+  margin: 0;
+}
+
+#gallerly .image-viewer .preview img {
+  height: 300px;
+  margin-right: 15px;
+}
+
+#gallerly .image-viewer > a > img {
+  height: 150px;
+}
+
+#gallerly .image-viewer > a {
+  cursor: pointer;
+  border: 1px solid #f1f1f1;
+  padding: 3px;
+  margin: 5px;
+  display: inline-block;
+}
+
+#gallerly .image-viewer > a:hover {
+  border: 1px solid #aaa;
+}
+
+#gallerly * {
+  position: relative;
+  -webkit-transition: all 0.15s ease;
+	-moz-transition: all 0.15s ease;
+	-ms-transition: all 0.15s ease;
+	-o-transition: all 0.15s ease;
+	transition: all 0.15s ease;
+}
+
+#gallerly .thumbnail.move-down {
+  top: 346px;
+}
+
+#gallerly .preview a {
+  cursor: pointer;
+  color: #000;
+  font-weight: 500;
+}
+
+#gallerly .preview .close-preview {
+  position: absolute;
+  top: 8px;
+  right: 5px;
+}
+
+#gallerly .preview .prev {
+  position: absolute;
+  left: 6px;
+  top: 50%
+}
+
+#gallerly .preview .next {
+  position: absolute;
+  right: 6px;
+  top: 50%
+}
+
+#gallerly .preview .preview-content {
+  margin-left: 75px;
+  margin-right: 75px;
+}
+
+#gallerly .preview .title {
+  color: rgb(53,38,20);
+}
+
+#gallerly .preview .arrow {
+  border-bottom: 10px solid #222;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  height: 0;
+  position: absolute;
+  top: -10px;
+  width: 0;
+}
+

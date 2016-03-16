@@ -1,1 +1,51 @@
-<h1>History</h1>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a ui-sref="home">Home</a></li>
+        <li><a href="page-templates/collection.html" target="_blank">Photos</a></li>
+        <li class="active dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">History<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a ui-sref="contents.history.about">About</a></li>
+            <li><a ui-sref="contents.history.familytree">Martha Lim Family Tree</a></li>
+            <li><a ui-sref="contents.history.familytree2">Antonio Kim Family Tree</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Other Resources<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a ui-sref="contents.other">All</a></li>
+            <li><a ui-sref="contents.other.book">Books</a></li>
+            <li><a ui-sref="contents.other.journal">Journal Articles</a></li>
+            <li><a ui-sref="contents.other.news">News</a></li>
+            <li><a ui-sref="contents.other.media">Multimedia</a></li>
+            <li><a ui-sref="contents.other.online">Online Resources</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+<div class="other-main" id="all">
+  <h1>History</h1>
+  <div ng-controller="HistoryTabs">
+    <tabset class="tabs tabss">
+      <tab 
+        ng-repeat="t in tabs" 
+        heading="{{t.heading}}"
+        select="go(t.route)"
+        active="t.active">
+      </tab>
+    </tabset>
+    <div ui-view></div>
+  </div>
+</div>

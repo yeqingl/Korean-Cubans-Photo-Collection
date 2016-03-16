@@ -1,0 +1,202 @@
+.as2 {
+	border-top: solid #000 1px;
+}
+
+#other-main {
+	padding-top: 30px;
+}
+
+#other-main .row1 {
+  margin-bottom: 10px;
+}
+
+#other-nav {
+	margin-bottom: 20px;
+}
+
+#other-nav li {
+	display: inline;
+}
+
+#other-right {
+	height: 800px;
+	border-left: solid #000 1px;
+}
+
+.all-img {
+  padding: 0px;
+}
+
+.hovereffect {
+  width: 100%;
+  height: 100%;
+  float: left;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  cursor: default;
+}
+
+.hovereffect .overlay {
+  width: 100%;
+  position: absolute;
+  overflow: hidden;
+  left: 0;
+  top: auto;
+  bottom: 0;
+  padding: 0.8em;
+  height: 3.5em;
+  background: rgba(0,0,0,0.8);
+  color: #000;
+  -webkit-transition: -webkit-transform 0.35s;
+  transition: transform 0.35s;
+  -webkit-transform: translate3d(0,100%,0);
+  transform: translate3d(0,100%,0);
+}
+
+.hovereffect .overlay p {
+  font-size: 20px;
+}
+
+.hovereffect .overlay a {
+  color: #fff;
+}
+
+.hovereffect img {
+  display: block;
+  position: relative;
+  -webkit-transition: -webkit-transform 0.35s;
+  transition: transform 0.35s;
+}
+
+.hovereffect:hover .overlay {
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+}
+
+.all-sec {
+	padding: 20px 0 20px 0;
+	margin-right: 30px;
+}
+
+#others {
+  margin-top: 20px;
+}
+
+#others dl {
+	text-align: left;
+}
+
+.each {
+  padding: 10px 10px 10px 0;
+}
+
+.resources {
+  /*background-color: #fff;*/
+  counter-reset: my-badass-counter;
+  float: left;
+  width: 70%;
+}
+
+.each:nth-of-type(odd) {
+  background-color: #eae1c6;
+}
+
+.res-right {
+  float: right;
+  width: 30%;
+}
+
+.resources dt:before {
+  content: counter(my-badass-counter);
+  counter-increment: my-badass-counter;
+  font-weight: 600;
+}
+
+.resources dt, .resources a {
+	font-weight: 400;
+	color: #000;
+  margin-left: 10px;
+}
+
+.resources a:hover {
+  text-decoration: underline;
+}
+
+.resources dd {
+	margin-left: 50px;
+}
+
+.nav>li.active>a, .nav>li.active>a:focus, .nav>li.active>a:hover, .nav>li>a:hover {
+  color: #fff;
+  background-color: #8E602B;
+  border-radius: 0;
+  border: none;
+}
+
+.nav>li>a {
+  border: none;
+	border-radius: 0;
+}
+
+.nav a {
+	color: #000;
+  display: inline;
+}
+
+.tabs {
+	text-align: center;
+  /*border-top: 1px solid #000;*/
+  border-bottom: 1px dashed #000;
+  padding: 10px 0 10px 0;
+}
+
+.tabs ul {
+  display: inline-block;
+  border: none;
+}
+
+.tabs li {
+	width: 150px;
+}
+
+.tabss li {
+  width: 190px;
+}
+
+.tabs li:hover {
+  cursor: pointer;
+}
+
+.photo-category {
+  padding: 120px 30px 0 30px;
+}
+
+.thumb img {
+  width: 100px;
+  height: 100px;
+}
+
+#about {
+  text-align: left;
+  width: 60%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#about h2 {
+  margin-top: 40px;
+}
+
+#about li {
+  width: 100%;
+  cursor: default;
+}
+
+#about ul {
+  margin-bottom: 0;
+}
+
+#about ol {
+  padding: 0 0 0 15px;
+}

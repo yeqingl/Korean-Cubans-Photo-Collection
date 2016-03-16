@@ -1,1 +1,0 @@
-# Korean-Cubans-Photo-Collection
