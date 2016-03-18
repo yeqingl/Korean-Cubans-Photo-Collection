@@ -81,12 +81,15 @@ a, a:hover, a:focus {
 
 }
 
-
-
 #logo {
   text-align: left;
   padding: 10px;
   background-color: #fff;
+}
+
+.logo2 {
+  padding: 0 !important;
+  margin: 10px;
 }
 
 .navbar-default {
